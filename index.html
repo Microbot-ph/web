@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Microbot | Build. Learn. Innovate.</title>
+  <link rel="icon" type="image/png" href="assets/images/Logo/logo.png">
+
+  <meta name="theme-color" content="#0d0d0d">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-shell" id="top">
+    <div class="shell-bar" role="navigation" aria-label="Primary navigation">
+      <a class="shell-brand" href="#home" aria-label="MICROBOT home">
+        <img src="assets/images/Logo/logo.png" alt="MICROBOT logo">
+        <span>MICROBOT</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="shell-nav" id="primaryNav" aria-label="Primary">
+        <a class="shell-link is-active" href="#home" data-nav="home">Home</a>
+        <a class="shell-link" href="#news" data-nav="news">News</a>
+        <a class="shell-link" href="#products" data-nav="products">Products</a>
+        <a class="shell-link" href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section reveal reveal-hero">
+      <div class="hero-bg-carousel" aria-hidden="true">
+        <div class="hero-bg-slide is-active" style="--hero-bg-image: url('assets/images/Banner/Banner 1.png');"></div>
+        <div class="hero-bg-slide" style="--hero-bg-image: url('assets/images/Banner/Banner 2.png');"></div>
+        <div class="hero-bg-slide" style="--hero-bg-image: url('assets/images/Banner/Banner 3.png');"></div>
+
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Future Robotics.<br>Built for Real-World Use.</h1>
+        <p class="hero-copy">Engineering practical electronics and robotics modules designed for learning, prototyping,
+          and real deployments.</p>
+
+      </div>
+    </section>
+    <section id="news" class="featured-banner-section reveal">
+      <div style="width: min(var(--shell-width), calc(100% - 100px)); margin: 0 auto;">
+        <h2 class="section-title">News</h2>
+      </div>
+      <div class="news-shell">
+        <div class="fbc" id="featuredBannerCarousel" aria-label="Featured news moments">
+          <div class="fbc-slide is-active">
+            <div class="fbc-media-main">
+              <img src="assets/images/News/Banner 1.1.png" alt="BYOU">
+              <div class="fbc-caption">
+                <h3 class="fbc-caption-title">Build-Your-Own Arduino – Learn by Building</h3>
+                <p class="fbc-caption-copy">Introducing the Build-Your-Own Arduino — a hands-on microcontroller kit
+                  designed to take learning beyond plug-and-play. Instead of buying a pre-assembled board, users build
+                  it themselves, gaining real-world electronics experience from the ground up.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fbc-slide">
+            <div class="fbc-media-main">
+              <img src="assets/images/News/Banner 2.1.png" alt="Rover">
+              <div class="fbc-caption">
+                <h3 class="fbc-caption-title">Rover – The All-in-One Robotics Module</h3>
+                <p class="fbc-caption-copy">Introducing Rover, the ultimate robotics control module designed to make
+                  building mobile robots faster, cleaner, and smarter. Whether you’re a student, hobbyist, or robotics
+                  enthusiast, Rover combines all the essential interfaces and mounts in one compact platform.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="fbc-slide">
+            <div class="fbc-media-main">
+              <img src="assets/images/News/Banner 3.1.png" alt="Nano Expansion Board">
+              <div class="fbc-caption">
+                <h3 class="fbc-caption-title">Nano Expansion Board - Build More. Wire Less. Create Faster.</h3>
+                <p class="fbc-caption-copy">Stop fighting messy wiring and start building smarter.
+                  This Arduino Expansion Board packs everything you need to power robotics and automation
+                  projects—cleanly and efficiently.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <button class="fbc-arrow fbc-arrow--prev" type="button" aria-label="Previous slide">&#10094;</button>
+          <button class="fbc-arrow fbc-arrow--next" type="button" aria-label="Next slide">&#10095;</button>
+
+          <div class="fbc-dots" aria-hidden="true">
+            <span class="fbc-dot is-active"></span>
+            <span class="fbc-dot"></span>
+            <span class="fbc-dot"></span>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section-block products-section reveal">
+      <h2 class="section-title">Products</h2>
+      <br>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn carousel-prev" type="button" aria-label="Previous products">&#10094;</button>
+        <div class="featured-carousel">
+          <div id="featuredGrid" class="carousel-track"></div>
+        </div>
+        <button class="carousel-btn carousel-next" type="button" aria-label="Next products">&#10095;</button>
+      </div>
+    </section>
+
+    <section id="about" class="section-block reveal about-section">
+      <h2 class="section-title">About</h2>
+      <h2 class="about-subtitle">What we do:</h2>
+      <p>At Microbot, we provide innovative electronics, robotics, and STEM learning solutions designed for students,
+        hobbyists, makers, educators, and professionals.</p>
+      <p>Our mission is to make technology education more accessible through hands-on learning experiences that inspire
+        creativity, problem-solving, and innovation.</p>
+      <div class="what-we-do-grid" aria-label="What we do services">
+        <article class="what-we-do-card">
+          <h3 class="what-we-do-title">Embedded Systems Development</h3>
+          <p class="what-we-do-copy">Custom microcontroller-based systems tailored for automation, robotics, IoT, and
+            intelligent devices.</p>
+        </article>
+
+        <article class="what-we-do-card">
+          <h3 class="what-we-do-title">Board-Level Circuit Design</h3>
+          <p class="what-we-do-copy">From schematic design to PCB development, we engineer efficient and
+            production-ready electronic hardware.</p>
+        </article>
+
+        <article class="what-we-do-card">
+          <h3 class="what-we-do-title">Learning and Prototyping Platforms</h3>
+          <p class="what-we-do-copy">Hands-on electronics kits and development boards that simplify embedded systems
+            learning without sacrificing technical depth.</p>
+        </article>
+
+        <article class="what-we-do-card">
+          <h3 class="what-we-do-title">Website Development</h3>
+          <p class="what-we-do-copy">Modern, responsive, and performance-focused websites engineered for businesses,
+            technical projects, and digital platforms with clean UI, scalable architecture, and seamless user
+            experience.</p>
+        </article>
+      </div>
+      <br>
+      <h2 class="about-subtitle">Our Commitment:</h2>
+      <p>We believe that the best way to learn technology is by building it. That's why we focus on products that allow
+        users to assemble, program, test, and understand how modern electronics work from the ground up.</p>
+      <p>Whether you're building your first circuit, developing a robotics project, or creating your next innovation,
+        Microbot is here to support your journey.</p>
+      <h2>Build. Learn. Innovate.</h2>
+      <br>
+      <h2 class="about-subtitle">Contact us:</h2>
+      <p>We'd Love to Hear From You. </p>
+      <p>Whether you have questions about our products, need technical support, or are looking for recommendations for
+        your next electronics project, we're here to help</p>
+      <div class="what-we-do-grid" aria-label="Contact options">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=microbot.ph@gmail.com" class="what-we-do-card" target="_blank" rel="noopener">
+          <h3 class="what-we-do-title">Email Us</h3>
+          <p>For inquiries, support, partnerships, and bulk orders:</p>
+          <h2>microbot.ph@gmail.com</h2>
+        </a>
+
+        <a href="https://shopee.ph/microbot.ph" class="what-we-do-card" target="_blank" rel="noopener">
+          <h3 class="what-we-do-title">Visit Our Shopee Store</h3>
+          <p>Browse our latest electronics kits, modules, components, and educational products:</p>
+          <h2>shopee.ph/microbot.ph</h2>
+        </a>
+
+        <a href="https://www.facebook.com/microbot.ph" class="what-we-do-card" target="_blank" rel="noopener">
+          <h3 class="what-we-do-title">Follow Us on Facebook</h3>
+          <p>Stay updated with new product releases, tutorials, project ideas, and promotions:</p>
+          <h2>fb.com/microbot.ph</h2>
+        </a>
+      </div>
+
+    </section>
+
+    <footer class="site-footer">
+
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="shell-brand">
+            <img src="assets/images/Logo/logo.png" alt="MICROBOT logo">
+            <span>MICROBOT</span>
+          </div>
+          <p>Future-ready robotics systems built for practical innovation and real-world use.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="#home">Home</a>
+          <a href="#news">News</a>
+          <a href="#products">Products</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="footer-col">
+          <h3>Products</h3>
+          <a href="product-detail.html?id=byou">BYOU / Build Your Own UNO</a>
+          <a href="product-detail.html?id=nano-expansion">Nano Expansion Board</a>
+          <a href="product-detail.html?id=rover-module">Rover Robotics Module</a>
+        </div>
+        <div class="footer-col">
+          <h3>Connect</h3>
+          <a href="mailto:microbot.ph@gmail.com">Email Us</a>
+          <a href="https://www.facebook.com/microbot.ph" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://shopee.ph/microbot.ph" target="_blank" rel="noopener">Shopee</a>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 MICROBOT. All rights reserved.</p>
+    </footer>
+
+  </main>
+
+
+  <script src="product-data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
