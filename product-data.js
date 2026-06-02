@@ -5,7 +5,7 @@ globalThis.PRODUCT_DATA = [
     shortDescription: "Introducing the Build-Your-Own Arduino — a hands-on microcontroller kit designed to take learning beyond plug-and-play. Instead of buying a pre-assembled board, users build it themselves, gaining real-world electronics experience from the ground up.",
     fullDescription:
       "This board delivers the same functionality and compatibility as a standard Arduino-style development board — but with the added value of true hardware understanding. From soldering components to testing circuits, users don’t just program — they build the brain behind their projects. <br><br> This isn’t just a development board — it’s an experience. It bridges theory and practice, turning learners into builders and builders into innovators. <br><br> Build it. Program it. Understand it. Own it.",
-    priceText: "₱389",
+    priceText: "₱412",
     images: [
       "assets/images/Products/BYOU/BLK.png",
       "assets/images/Products/BYOU/BLK_BACK.jpg"
@@ -31,7 +31,7 @@ globalThis.PRODUCT_DATA = [
     shortDescription: "Stop fighting messy wiring and start building smarter. This Arduino Expansion Board packs everything you need to power robotics and automation projects—cleanly and efficiently.",
     fullDescription:
       "Less clutter. More creativity. <br><br> Whether you're building robots, smart systems, or prototypes—this board helps you go from idea to reality, faster. <br><br> Nano Expansion Board provides organized wiring channels, motor driver support, and quick terminal access so your Nano-based robotics builds can move from wiring to testing faster.",
-    priceText: "₱249",
+    priceText: "₱239",
     images: [
       "assets/images/Products/Nano Expansion/4.jpg",
       "assets/images/Products/Nano Expansion/2.jpg"
@@ -64,7 +64,7 @@ globalThis.PRODUCT_DATA = [
     shortDescription: "Introducing Rover, the ultimate robotics control module designed to make building mobile robots faster, cleaner, and smarter. Whether you’re a student, hobbyist, or robotics enthusiast, Rover combines all the essential interfaces and mounts in one compact platform.",
     fullDescription:
       "Rover isn’t just a module — it’s a platform that simplifies robotics, letting you focus on programming, innovation, and experimentation rather than hardware headaches. <br><br> Build. Connect. Control. Innovate. With Rover, your robotic ideas come to life faster and smarter.",
-    priceText: "₱279",
+    priceText: "₱269",
     images: [
       "assets/images/Products/Rover/1.png",
       "assets/images/Products/Rover/2.jpg",
