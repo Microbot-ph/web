@@ -1,37 +1,61 @@
-Product links and documentation
+# Micro Bot Website
 
-This project stores product metadata in `product-data.js`. Each product has these key fields you can edit:
+Official website for **Micro Bot**, a Philippine-based electronics and robotics supplier dedicated to providing affordable, high-quality components, development boards, and educational solutions for makers, students, educators, and engineers.
 
-- `id`: product identifier (used in URLs)
-- `name`: product display name
-- `shopeeLink`: existing Shopee link
-- `buyLink`: (NEW) link used for the "Buy Now" button — paste your preferred sales/checkout URL here
-- `documentation`: (NEW) link to product documentation or PDF. Set this to `paste link here` as a placeholder.
+## Overview
+The Micro Bot website serves as a central platform for showcasing products, company information, and customer resources. Visitors can explore available products, learn about the company, and access purchasing channels and support information.
 
-How to add your links
+## Features
+* Product showcase and catalog
+* Company information and mission
+* Contact and support information
+* Mobile-friendly responsive design
+* Direct links to Shopee and Facebook
+* Fast-loading static website
 
-1. Open `product-data.js` and find the product you want to update (e.g., `byou`, `nano-expansion`, `rover-module`).
-2. Update the `buyLink` value with your product's purchase URL.
-3. Replace the `documentation` value with the documentation URL (or keep `paste link here` until ready).
+## Technologies Used
+* HTML5
+* CSS3
+* JavaScript
+* GitHub Pages
 
-Example:
+## Website
+Visit the official website:
+https://microbot-ph.github.io/web/
 
-	{
-		id: "byou",
-		name: "Build-Your-Own Uno",
-		...
-		buyLink: "https://yourstore.example.com/byou",
-		documentation: "https://docs.example.com/byou"
-	}
+## Shop Online
+Purchase our products through our official Shopee store:
+https://shopee.ph/microbot.ph
 
-What the site shows
+## Follow Us
+Stay updated with new products, tutorials, and announcements:
+Facebook:
+https://www.facebook.com/microbot.ph
 
-- The product list cards include a "View Product" link (to the detail page), a "Buy Now" button (opens the `buyLink`), and a "Docs" button (opens `documentation`).
-- The product detail page also uses `buyLink` for the Buy button and `documentation` for the Product Documentation button.
+## Products
+Micro Bot offers a growing range of electronics and robotics products, including:
+* Arduino-compatible development boards
+* Robotics expansion boards
+* Sensors and modules
+* Educational electronics kits
+* STEM learning solutions
+* Custom-designed electronics products
 
-Other quick tips
+## Mission
+Our mission is to make electronics, robotics, and embedded systems development more accessible to students, hobbyists, educators, and innovators by providing reliable products, educational resources, and responsive support.
 
-- To change the hero text, edit the `quotes` array inside `script.js` (used by the typing animation).
-- To change visual styles, edit `style.css` (look for `.hero-section`, `.doc-btn`, `.product-button-wrap`).
+## Contact
+For inquiries, technical support, or partnership opportunities:
+Email: [microbot.ph@gmail.com](mailto:microbot.ph@gmail.com)
 
-If you want, tell me the exact buy/documentation URLs and I can paste them into `product-data.js` for you.
+Website:
+https://microbot-ph.github.io/web/
+
+Facebook:
+https://www.facebook.com/microbot.ph
+
+Shopee:
+https://shopee.ph/microbot.ph
+
+## License
+© Micro Bot. All rights reserved.
