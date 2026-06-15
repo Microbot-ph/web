@@ -1,9 +1,9 @@
-# Micro Bot Website
+# Microbot Website
 
-Official website for **Micro Bot**, a Philippine-based electronics and robotics supplier dedicated to providing affordable, high-quality components, development boards, and educational solutions for makers, students, educators, and engineers.
+Official website for **Microbot**, a Philippine-based electronics and robotics supplier dedicated to providing affordable, high-quality components, development boards, and educational solutions for makers, students, educators, and engineers.
 
 ## Overview
-The Micro Bot website serves as a central platform for showcasing products, company information, and customer resources. Visitors can explore available products, learn about the company, and access purchasing channels and support information.
+The Microbot website serves as a central platform for showcasing products, company information, and customer resources. Visitors can explore available products, learn about the company, and access purchasing channels and support information.
 
 ## Features
 * Product showcase and catalog
@@ -33,7 +33,7 @@ Facebook:
 https://www.facebook.com/microbot.ph
 
 ## Products
-Micro Bot offers a growing range of electronics and robotics products, including:
+Microbot offers a growing range of electronics and robotics products, including:
 * Arduino-compatible development boards
 * Robotics expansion boards
 * Sensors and modules
@@ -58,4 +58,4 @@ Shopee:
 https://shopee.ph/microbot.ph
 
 ## License
-© Micro Bot. All rights reserved.
+© Microbot. All rights reserved.
