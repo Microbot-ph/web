@@ -64,7 +64,7 @@ globalThis.PRODUCT_DATA = [
     shortDescription: "Introducing Rover, the ultimate robotics control module designed to make building mobile robots faster, cleaner, and smarter. Whether you’re a student, hobbyist, or robotics enthusiast, Rover combines all the essential interfaces and mounts in one compact platform.",
     fullDescription:
       "Rover isn’t just a module — it’s a platform that simplifies robotics, letting you focus on programming, innovation, and experimentation rather than hardware headaches. <br><br> Build. Connect. Control. Innovate. With Rover, your robotic ideas come to life faster and smarter.",
-    priceText: "₱269",
+    priceText: "₱299",
     images: [
       "assets/images/Products/Rover/1.png",
       "assets/images/Products/Rover/2.jpg",
