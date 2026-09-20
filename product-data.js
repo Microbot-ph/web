@@ -31,7 +31,7 @@ globalThis.PRODUCT_DATA = [
     shortDescription: "Stop fighting messy wiring and start building smarter. This Arduino Expansion Board packs everything you need to power robotics and automation projects—cleanly and efficiently.",
     fullDescription:
       "Less clutter. More creativity. <br><br> Whether you're building robots, smart systems, or prototypes—this board helps you go from idea to reality, faster. <br><br> Nano Expansion Board provides organized wiring channels, motor driver support, and quick terminal access so your Nano-based robotics builds can move from wiring to testing faster.",
-    priceText: "₱239",
+    priceText: "₱279",
     images: [
       "assets/images/Products/Nano Expansion/4.jpg",
       "assets/images/Products/Nano Expansion/2.jpg"
@@ -64,7 +64,7 @@ globalThis.PRODUCT_DATA = [
     shortDescription: "Introducing Rover, the ultimate robotics control module designed to make building mobile robots faster, cleaner, and smarter. Whether you’re a student, hobbyist, or robotics enthusiast, Rover combines all the essential interfaces and mounts in one compact platform.",
     fullDescription:
       "Rover isn’t just a module — it’s a platform that simplifies robotics, letting you focus on programming, innovation, and experimentation rather than hardware headaches. <br><br> Build. Connect. Control. Innovate. With Rover, your robotic ideas come to life faster and smarter.",
-    priceText: "₱299",
+    priceText: "₱349",
     images: [
       "assets/images/Products/Rover/1.png",
       "assets/images/Products/Rover/2.jpg",
