@@ -210,8 +210,8 @@ export const NEWS = [
     copy: "Stop fighting messy wiring and start building smarter. This Arduino Expansion Board packs everything you need to power robotics and automation projects—cleanly and efficiently.",
   },
   {
-    image: "assets/images/News/news-linefollower.webp",
-    alt: "Line Follower Frame Kit parts laid out: board, wheels, wires and hardware",
+    image: "assets/images/Products/LineFollower/1.webp",
+    alt: "Assembled Microbot line-following robot with Nano, motor driver and sensor array",
     productId: "line-follower",
     tag: "MB-04 · Line Follower Frame Kit",
     title: "Line Follower Frame Kit – Build Your Own Line-Following Robot",
