@@ -36,7 +36,6 @@ function CartView({ rows, total }) {
             <img src={product.images[0]} alt="" />
             <div className="shop-line-info">
               <b>{product.name}</b>
-              <small>{peso(unit)} each</small>
               <div className="qty">
                 <button type="button" aria-label="Decrease quantity" onClick={() => cart.setQty(product.id, qty - 1)}>−</button>
                 <span>{qty}</span>
@@ -44,14 +43,12 @@ function CartView({ rows, total }) {
               </div>
             </div>
             <div className="shop-line-end">
-              <b>{peso(line)}</b>
               <button type="button" className="link-btn" onClick={() => cart.remove(product.id)}>Remove</button>
             </div>
           </li>
         ))}
       </ul>
       <div className="shop-foot">
-        <div className="shop-total"><span>Subtotal</span><b>{peso(total)}</b></div>
         <p className="shop-note">Delivery or meet-up fee (if any) is confirmed by Microbot after you order.</p>
         <button type="button" className="btn btn-primary" onClick={() => shopUI.view("checkout")}><span>Checkout</span><Icon name="arrow" size={16} /></button>
       </div>
@@ -64,7 +61,7 @@ function CheckoutView({ rows, total, onDone }) {
   const [state, setState] = useState({ busy: false, error: "" });
   const set = (k) => (e) => setF((s) => ({ ...s, [k]: e.target.value }));
 
-  const summary = rows.map((r) => `${r.qty} x ${r.product.name} @ ${peso(r.unit)} = ${peso(r.line)}`).join("\n");
+  const summary = rows.map((r) => `${r.qty} x ${r.product.name}`).join("\n");
 
   const submit = async (e) => {
     e.preventDefault();
@@ -79,7 +76,6 @@ function CheckoutView({ rows, total, onDone }) {
       ...(f.email ? { _replyto: f.email, email: f.email } : {}),
       "Order No.": id,
       Items: summary,
-      Total: peso(total),
       Name: f.name,
       Phone: f.phone,
       City: f.city,
@@ -104,7 +100,7 @@ function CheckoutView({ rows, total, onDone }) {
   };
 
   const mailFallback = () => {
-    const body = `Name: ${f.name}\nPhone: ${f.phone}\nCity: ${f.city}\nAddress: ${f.address}\n${f.method} / ${f.payment}\n\n${summary}\nTotal: ${peso(total)}\n\nNotes: ${f.notes || "-"}`;
+    const body = `Name: ${f.name}\nPhone: ${f.phone}\nCity: ${f.city}\nAddress: ${f.address}\n${f.method} / ${f.payment}\n\n${summary}\n\nNotes: ${f.notes || "-"}`;
     window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${ORDER_EMAIL}&su=${encodeURIComponent("Microbot order")}&body=${encodeURIComponent(body)}`, "_blank", "noopener");
   };
 
@@ -137,7 +133,7 @@ function CheckoutView({ rows, total, onDone }) {
       <label>Notes (optional)<textarea rows={2} value={f.notes} onChange={set("notes")} /></label>
       <input type="text" name="_honey" value={f._honey} onChange={set("_honey")} tabIndex={-1} autoComplete="off" className="hp" aria-hidden="true" />
 
-      <div className="shop-total"><span>Total ({countOf(rows)} item{countOf(rows) === 1 ? "" : "s"})</span><b>{peso(total)}</b></div>
+      <div className="shop-total"><span>Items</span><b>{countOf(rows)}</b></div>
       {state.error && (
         <div className="shop-error" role="alert">{state.error} <button type="button" className="link-btn" onClick={mailFallback}>Email order via Gmail</button></div>
       )}
@@ -151,7 +147,7 @@ function DoneView({ done }) {
     <div className="shop-empty">
       <Icon name="check" size={38} />
       <h3>Order sent!</h3>
-      <p>Order <b>{done.id}</b> · {peso(done.total)}</p>
+      <p>Order <b>{done.id}</b></p>
       <p className="shop-note">Microbot will contact you by phone or text to confirm delivery/meet-up details. Keep your order number handy.</p>
       <button type="button" className="btn btn-outline" onClick={() => { shopUI.close(); shopUI.view("cart"); }}><span>Close</span></button>
     </div>
