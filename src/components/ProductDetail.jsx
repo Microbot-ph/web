@@ -62,7 +62,7 @@ export default function ProductDetail() {
           <div className="detail-content">
             <p className="detail-label"><i className="status-dot" /> MICROBOT PRODUCT</p>
             <h1 className="detail-title">{product.name}</h1>
-            <p className="detail-price">{product.priceText || product.availability}</p>
+            {product.availability === "Coming soon" ? <p className="detail-price">Coming soon</p> : null}
             <p className="detail-description" dangerouslySetInnerHTML={{ __html: product.fullDescription }} />
 
             <div className="detail-list-wrap">
