@@ -61,6 +61,10 @@ function CheckoutView({ rows, total, onDone }) {
   const [f, setF] = useState({ name: "", phone: "", email: "", city: SERVICE_AREAS[0], address: "", method: "Delivery", payment: "Cash on delivery / meet-up", notes: "", _honey: "" });
   const [state, setState] = useState({ busy: false, error: "" });
   const set = (k) => (e) => setF((s) => ({ ...s, [k]: e.target.value }));
+  const setPhone = (e) => {
+    const d = e.target.value.replace(/\D/g, "").slice(0, 11);
+    setF((s) => ({ ...s, phone: [d.slice(0, 4), d.slice(4, 7), d.slice(7, 11)].filter(Boolean).join(" ") }));
+  };
 
   const summary = rows.map((r) => `${r.qty} x ${r.product.name}`).join("\n");
 
@@ -105,10 +109,11 @@ function CheckoutView({ rows, total, onDone }) {
     <form className="shop-form" onSubmit={submit}>
       <button type="button" className="link-btn back" onClick={() => shopUI.view("cart")}>← Back to cart</button>
       <p className="shop-area">Local orders only: <b>Baguio City</b> and <b>La Trinidad, Benguet</b>.</p>
+      {f.method === "Delivery" && <p className="shop-area"><b>Free delivery</b> to schools in Baguio City and La Trinidad, 9:00 AM – 12:00 PM.<br />Other addresses: delivery fee of ₱120–150.</p>}
 
       <label>Full name<input required value={f.name} onChange={set("name")} autoComplete="name" /></label>
       <div className="two">
-        <label>Mobile number<input required type="tel" inputMode="tel" pattern="[0-9+()\s-]{10,16}" title="e.g. 09171234567" value={f.phone} onChange={set("phone")} autoComplete="tel" /></label>
+        <label>Mobile number<input required type="tel" inputMode="numeric" maxLength={13} placeholder="0915 295 3670" pattern="[0-9]{4} [0-9]{3} [0-9]{4}" title="11-digit mobile number, e.g. 0915 295 3670" value={f.phone} onChange={setPhone} autoComplete="tel" /></label>
         <label>Email (optional)<input type="email" value={f.email} onChange={set("email")} autoComplete="email" /></label>
       </div>
       <div className="two">
