@@ -12,6 +12,7 @@ export function CartButton() {
   );
 }
 
+const ORDER_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfvyDNjYNtVqIVKxSmUT1vaD_9DjB3lZVuhNs_uDdEW5VOZQQ/formResponse";
 const orderId = () => {
   const d = new Date();
   const p = (x) => String(x).padStart(2, "0");
@@ -69,29 +70,23 @@ function CheckoutView({ rows, total, onDone }) {
     if (!rows.length) return;
     setState({ busy: true, error: "" });
     const id = orderId();
-    const payload = {
-      _subject: `New Microbot order ${id} - ${f.name}`,
-      _template: "table",
-      _captcha: "false",
-      ...(f.email ? { _replyto: f.email, email: f.email } : {}),
-      "Order No.": id,
-      Items: summary,
-      Name: f.name,
-      Phone: f.phone,
-      City: f.city,
-      Address: f.address,
-      "Delivery / Meet-up": f.method,
-      Payment: f.payment,
-      Notes: f.notes || "-",
-    };
+    const body = new URLSearchParams({
+      "entry.856448210": id,
+      "entry.713324021": summary,
+      "entry.524027571": f.name,
+      "entry.405323977": f.phone,
+      "entry.64677458": f.email || "-",
+      "entry.225098598": f.city,
+      "entry.1350714903": f.address,
+      "entry.1865948782": f.method,
+      "entry.26060596": f.payment,
+      "entry.13419995": f.notes || "-",
+    });
     try {
-      const res = await fetch(`https://formsubmit.co/ajax/${ORDER_EMAIL}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok || data.success === "false" || data.success === false) throw new Error(data.message || "send failed");
+      const ctl = new AbortController();
+      const timer = setTimeout(() => ctl.abort(), 15000);
+      await fetch(ORDER_FORM_URL, { method: "POST", mode: "no-cors", body, signal: ctl.signal });
+      clearTimeout(timer);
       cart.clear();
       onDone({ id, total, email: f.email });
     } catch {
